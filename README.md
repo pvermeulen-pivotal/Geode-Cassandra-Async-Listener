@@ -84,8 +84,8 @@ System Variable	Description
 GFSH Environment Variables
 
 Environment Variable	Description
-* APP_FETCH_SIZE - Fetch size to be used while querying. Values: 0 - 2147483647. Default &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value is 100
-* APP_LAST_EXIT_STATUS - Last command exit status. Similar to $? (Unix) and %errorlevel% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Windows). Values: 0 (successful), 1 (error). read only
+* APP_FETCH_SIZE - Fetch size to be used while querying. Values: 0 - 2147483647. Default value is 100
+* APP_LAST_EXIT_STATUS - Last command exit status. Similar to $? (Unix) and %errorlevel% (Windows). Values: 0 (successful), 1 (error). read only
 * APP_LOGGING_ENABLED	- Whether gfsh logging is enabled. Default: false. read only
 
 You can enable gfsh logging by setting the gfsh.log-level Java system property to a supported Java log level
@@ -109,7 +109,8 @@ set variable --name="APP_RESULT_VIEWER " --value="less" 
 ### Creating and Running gfsh Command Scripts
 
 Gfsh offers several ways to script run commands.
-**Running gfsh Scripts
+
+**Running gfsh Scripts**
 You can create and run scripts that contain gfsh commands that you wish to execute. To execute the script, use the gfsh run command. 
 
 For example: gfsh run --file=myFile.gfsh --continue-on-error --quiet
@@ -120,19 +121,19 @@ Your command history file can be helpful when you write a gfsh script. A history
 
 When a user runs start server or start locator from gfsh without specifying the member name, gfsh will automatically pick a random member name. This is useful for automation.
 
-** Running gfsh Commands on the OS Command Line
+**Running gfsh Commands on the OS Command Line**
 
 You can run some gfsh commands directly from your operating system’s prompt by preceding the command with gfsh . This can be useful for Unix shell or Windows batch scripting. 
 
 For example: gfsh start locator --name=locator1 --port=10334
 
-** Running Multiple gfsh Commands on the OS Command Line
+**Running Multiple gfsh Commands on the OS Command Line**
 
 To run multiple commands directly on the command line, use the -e option followed by the gfsh command within quote marks. 
 
 For example: gfsh -e "connect --use-http --url https://cloudcache-1.example.com/gemfire/v1" -e "rebalance" 
 
-** gfsh Commands with Parameter to Test Existence
+**gfsh Commands with Parameter to Test Existence**
 
 The parameter "--if-not-exists" is provided on a gfsh command, allows for a script when running a gfsh create command that supports this parameter does not fail in the event the object exists.
 
