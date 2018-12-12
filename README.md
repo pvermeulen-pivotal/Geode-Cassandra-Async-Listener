@@ -72,15 +72,15 @@ cf update-service my- cloudcache -c '{"restart": true}'
 
 GFSH System Variables
 
-&nbsp;&nbsp;System Variable	Description
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_CLASSPATH	CLASSPATH of the gfsh JVM.  read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_GEMFIRE_DIR	Product directory where GemFire has been installed. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_HOST_NAME	Host from which gfsh is started. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_JAVA_VERSION	Java version used. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_OS	OS name. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_OS_LINE_SEPARATOR	Line separator (\ or ^) variable that you can use when writing gfsh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scripts. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_USER	User name. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_USER_HOME	User’s home directory. read only
+System Variable	Description
+SYS_CLASSPATH	CLASSPATH of the gfsh JVM.  read only
+SYS_GEMFIRE_DIR	Product directory where GemFire has been installed. read only
+SYS_HOST_NAME	Host from which gfsh is started. read only
+SYS_JAVA_VERSION	Java version used. read only
+SYS_OS	OS name. read only
+SYS_OS_LINE_SEPARATOR	Line separator (\ or ^) variable that you can use when writing gfsh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scripts. read only
+SYS_USER	User name. read only
+SYS_USER_HOME	User’s home directory. read only
 
 GFSH Environment Variables
 
