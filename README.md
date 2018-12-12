@@ -51,14 +51,14 @@ The client certificate public key must be installed in the Cassandra trust store
 
 # Basic GemFire gfsh Commands
 
-debug - Enable or disable debugging output in gfsh
-echo - Echo the given text, which may include system and user variables
-exit - Exit the gfsh shell. You can also use quit to exit the shell
-help - If the argument is a gfsh command, displays syntax and usage information for the command. If there are no arguments, displays a list of all available commands
-hint - Display information on topics and a list of commands associated with a topic
-history - Show or save the command history
-run - Execute a set of GFSH commands
-sh - Executes operating system (OS) commands
-set variable - Set variables in the GFSH environment
-sleep - Delay gfsh command execution
-version - Display product version information
+* debug - Enable or disable debugging output in gfsh
+* echo - Echo the given text, which may include system and user variables
+* exit - Exit the gfsh shell. You can also use quit to exit the shell
+* help - If the argument is a gfsh command, displays syntax and usage information for the command. If there are no arguments, displays a list of all available commands
+* hint - Display information on topics and a list of commands associated with a topic
+* history - Show or save the command history
+* run - Execute a set of GFSH commands
+* sh - Executes operating system (OS) commands
+* set variable - Set variables in the GFSH environment
+* sleep - Delay gfsh command execution
+* version - Display product version information
