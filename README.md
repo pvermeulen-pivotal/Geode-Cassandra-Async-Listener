@@ -67,37 +67,34 @@ cf update-service my-cloudcache -c '{" distributed_system_id" : 1 }'
 ### Restart Service Commands
 cf update-service my- cloudcache -c '{"restart": true}'
 
-
 ## PCC Geode/GemFire Overview and Commands
 
 GFSH System Variables
 
 System Variable	Description
-SYS_CLASSPATH	CLASSPATH of the gfsh JVM.  read only
-SYS_GEMFIRE_DIR	Product directory where GemFire has been installed. read only
-SYS_HOST_NAME	Host from which gfsh is started. read only
-SYS_JAVA_VERSION	Java version used. read only
-SYS_OS	OS name. read only
-SYS_OS_LINE_SEPARATOR	Line separator (\ or ^) variable that you can use when writing gfsh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scripts. read only
-SYS_USER	User name. read only
-SYS_USER_HOME	User’s home directory. read only
+* SYS_CLASSPATH	CLASSPATH of the gfsh JVM.  read only
+* SYS_GEMFIRE_DIR	Product directory where GemFire has been installed. read only
+* SYS_HOST_NAME	Host from which gfsh is started. read only
+* SYS_JAVA_VERSION	Java version used. read only
+* SYS_OS	OS name. read only
+* SYS_OS_LINE_SEPARATOR	Line separator (\ or ^) variable that you can use when writing gfsh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scripts. read only
+* SYS_USER	User name. read only
+* SYS_USER_HOME	User’s home directory. read only
 
 GFSH Environment Variables
 
-&nbsp;&nbsp;Environment Variable	Description
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_FETCH_SIZE	Fetch size to be used while querying. Values: 0 - 2147483647. Default &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value is 100
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_LAST_EXIT_STATUS	Last command exit status. Similar to $? (Unix) and %errorlevel% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Windows). Values: 0 (successful), 1 (error),
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2(crash). read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_LOGGING_ENABLED	Whether gfsh logging is enabled. Default: false. read only
+Environment Variable	Description
+* APP_FETCH_SIZE	Fetch size to be used while querying. Values: 0 - 2147483647. Default &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value is 100
+* APP_LAST_EXIT_STATUS	Last command exit status. Similar to $? (Unix) and %errorlevel% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Windows). Values: 0 (successful), 1 (error). read only
+* APP_LOGGING_ENABLED	Whether gfsh logging is enabled. Default: false. read only
 
-&nbsp;&nbsp;You can enable gfsh logging by setting the gfsh.log-level Java system property to a supported Java log level
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_LOG_FILE	Path and name of current gfsh log file. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_NAME	Name of the application – gfsh. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_PWD	working directory where gfsh was launched. read only
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_QUERY_RESULTS_DISPLAY_MODE	Toggle the display mode for returning query results. Values: table or catalog. Default value is table
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_QUIET_EXECUTION	Whether the execution should be in quiet mode. Values (case insensitive): true, false. Default value is false
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_RESULT_VIEWER
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Set this variable to external to enable viewing of the output using the UNIX less command. Unix only
+You can enable gfsh logging by setting the gfsh.log-level Java system property to a supported Java log level
+* APP_LOG_FILE	Path and name of current gfsh log file. read only
+* APP_NAME	Name of the application – gfsh. read only
+* APP_PWD	working directory where gfsh was launched. read only
+* APP_QUERY_RESULTS_DISPLAY_MODE	Toggle the display mode for returning query results. Values: table or catalog. Default value is table
+* APP_QUIET_EXECUTION	Whether the execution should be in quiet mode. Values (case insensitive): true, false. Default value is false
+* APP_RESULT_VIEWER Set this variable to external to enable viewing of the output using the UNIX less command. Unix only
 
 ### Display GFSH System and Environment Variables
 
