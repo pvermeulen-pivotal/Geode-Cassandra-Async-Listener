@@ -72,29 +72,29 @@ cf update-service my- cloudcache -c '{"restart": true}'
 GFSH System Variables
 
 System Variable	Description
-* SYS_CLASSPATH	CLASSPATH of the gfsh JVM.  read only
-* SYS_GEMFIRE_DIR	Product directory where GemFire has been installed. read only
-* SYS_HOST_NAME	Host from which gfsh is started. read only
-* SYS_JAVA_VERSION	Java version used. read only
-* SYS_OS	OS name. read only
-* SYS_OS_LINE_SEPARATOR	Line separator (\ or ^) variable that you can use when writing gfsh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scripts. read only
-* SYS_USER	User name. read only
-* SYS_USER_HOME	User’s home directory. read only
+* SYS_CLASSPATH	- CLASSPATH of the gfsh JVM.  read only
+* SYS_GEMFIRE_DIR	- Product directory where GemFire has been installed. read only
+* SYS_HOST_NAME	- Host from which gfsh is started. read only
+* SYS_JAVA_VERSION - Java version used. read only
+* SYS_OS - OS name. read only
+* SYS_OS_LINE_SEPARATOR	- Line separator (\ or ^) variable that you can use when writing gfsh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scripts. read only
+* SYS_USER - User name. read only
+* SYS_USER_HOME - User’s home directory. read only
 
 GFSH Environment Variables
 
 Environment Variable	Description
-* APP_FETCH_SIZE	Fetch size to be used while querying. Values: 0 - 2147483647. Default &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value is 100
-* APP_LAST_EXIT_STATUS	Last command exit status. Similar to $? (Unix) and %errorlevel% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Windows). Values: 0 (successful), 1 (error). read only
-* APP_LOGGING_ENABLED	Whether gfsh logging is enabled. Default: false. read only
+* APP_FETCH_SIZE - Fetch size to be used while querying. Values: 0 - 2147483647. Default &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value is 100
+* APP_LAST_EXIT_STATUS - Last command exit status. Similar to $? (Unix) and %errorlevel% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Windows). Values: 0 (successful), 1 (error). read only
+* APP_LOGGING_ENABLED	- Whether gfsh logging is enabled. Default: false. read only
 
 You can enable gfsh logging by setting the gfsh.log-level Java system property to a supported Java log level
-* APP_LOG_FILE	Path and name of current gfsh log file. read only
-* APP_NAME	Name of the application – gfsh. read only
-* APP_PWD	working directory where gfsh was launched. read only
-* APP_QUERY_RESULTS_DISPLAY_MODE	Toggle the display mode for returning query results. Values: table or catalog. Default value is table
-* APP_QUIET_EXECUTION	Whether the execution should be in quiet mode. Values (case insensitive): true, false. Default value is false
-* APP_RESULT_VIEWER Set this variable to external to enable viewing of the output using the UNIX less command. Unix only
+* APP_LOG_FILE - Path and name of current gfsh log file. read only
+* APP_NAME - Name of the application – gfsh. read only
+* APP_PWD - working directory where gfsh was launched. read only
+* APP_QUERY_RESULTS_DISPLAY_MODE - Toggle the display mode for returning query results. Values: table or catalog. Default value is table
+* APP_QUIET_EXECUTION - Whether the execution should be in quiet mode. Values (case insensitive): true, false. Default value is false
+* APP_RESULT_VIEWER - Set this variable to external to enable viewing of the output using the UNIX less command. Unix only
 
 ### Display GFSH System and Environment Variables
 
@@ -109,34 +109,38 @@ set variable --name="APP_RESULT_VIEWER " --value="less" 
 ### Creating and Running gfsh Command Scripts
 
 Gfsh offers several ways to script run commands.
-&nbsp;&nbsp;Running gfsh Scripts
-&nbsp;&nbsp;You can create and run scripts that contain gfsh commands that you wish to execute. To execute the script, use the gfsh run command. 
+**Running gfsh Scripts
+You can create and run scripts that contain gfsh commands that you wish to execute. To execute the script, use the gfsh run command. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: gfsh run --file=myFile.gfsh --continue-on-error --quiet
+For example: gfsh run --file=myFile.gfsh --continue-on-error --quiet
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note: When you run a gfsh script, interactive parameters are ignored. You can also set the script to run in quiet mode to prevent output and instruct the script to skip any errors it encounters.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your command history file can be helpful when you write a gfsh script. A history of commands that have been executed successfully is logged in the .gfsh.history file in the home directory of the user running gfsh. You can also export a history file with the history --file=your_file_name command.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When a user runs start server or start locator from gfsh without specifying the member name, gfsh will automatically pick a random member name. This is useful for automation.
+When you run a gfsh script, interactive parameters are ignored. You can also set the script to run in quiet mode to prevent output and instruct the script to skip any errors it encounters.
 
-&nbsp;&nbsp;Running gfsh Commands on the OS Command Line
+Your command history file can be helpful when you write a gfsh script. A history of commands that have been executed successfully is logged in the .gfsh.history file in the home directory of the user running gfsh. You can also export a history file with the history --file=your_file_name command.
 
-&nbsp;&nbsp;You can run some gfsh commands directly from your operating system’s prompt by preceding the command with gfsh . This can be useful for Unix shell or Windows batch scripting. 
+When a user runs start server or start locator from gfsh without specifying the member name, gfsh will automatically pick a random member name. This is useful for automation.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: gfsh start locator --name=locator1 --port=10334
+**Running gfsh Commands on the OS Command Line
 
-&nbsp;&nbsp;Running Multiple gfsh Commands on the OS Command Line
-&nbsp;&nbsp;To run multiple commands directly on the command line, use the -e option followed by the gfsh command within quote marks. 
+You can run some gfsh commands directly from your operating system’s prompt by preceding the command with gfsh . This can be useful for Unix shell or Windows batch scripting. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: gfsh -e "connect --use-http --url https://cloudcache-1.example.com/gemfire/v1" -e "rebalance" 
+For example: gfsh start locator --name=locator1 --port=10334
 
-&nbsp;&nbsp;gfsh Commands with Parameter to Test Existence
-&nbsp;&nbsp;The parameter "--if-not-exists" is provided on a gfsh command, allows for a script when running a gfsh create command that supports this parameter does not fail in the event the object exists.
+**Running Multiple gfsh Commands on the OS Command Line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The current gfsh commands that support the "--if-not-exists"  parameter are:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	create gateway receiver
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	create jndi-binding
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	create region
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	put
+To run multiple commands directly on the command line, use the -e option followed by the gfsh command within quote marks. 
+
+For example: gfsh -e "connect --use-http --url https://cloudcache-1.example.com/gemfire/v1" -e "rebalance" 
+
+**gfsh Commands with Parameter to Test Existence
+
+The parameter "--if-not-exists" is provided on a gfsh command, allows for a script when running a gfsh create command that supports this parameter does not fail in the event the object exists.
+
+The current gfsh commands that support the "--if-not-exists"  parameter are:
+*	create gateway receiver
+* create jndi-binding
+* create region
+* put
 
 ### gfsh Command Restrictions 
 Developers may invoke all gfsh commands. Given credentials with sufficient permissions, those gfsh command will be executed. However, not all gfsh commands are supported. An invocation of an unsupported command may lead to incorrect results. Those results range from ineffective results to inconsistent region entries. 
