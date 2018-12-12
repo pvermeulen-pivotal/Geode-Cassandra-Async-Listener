@@ -86,9 +86,7 @@ GFSH Environment Variables
 Environment Variable	Description
 * APP_FETCH_SIZE - Fetch size to be used while querying. Values: 0 - 2147483647. Default value is 100
 * APP_LAST_EXIT_STATUS - Last command exit status. Similar to $? (Unix) and %errorlevel% (Windows). Values: 0 (successful), 1 (error). read only
-* APP_LOGGING_ENABLED	- Whether gfsh logging is enabled. Default: false. read only
-
-You can enable gfsh logging by setting the gfsh.log-level Java system property to a supported Java log level
+* APP_LOGGING_ENABLED	- Whether gfsh logging is enabled. Default: false. read only. You can enable gfsh logging by setting the gfsh.log-level Java system property to a supported Java log level
 * APP_LOG_FILE - Path and name of current gfsh log file. read only
 * APP_NAME - Name of the application – gfsh. read only
 * APP_PWD - working directory where gfsh was launched. read only
