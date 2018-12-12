@@ -69,7 +69,7 @@ The client certificate public key must be installed in the Cassandra trust store
 
 ## PCC Geode/GemFire Overview and Commands
 
-GFSH System Variables
+### GFSH System Variables
 
 System Variable	Description
 * SYS_CLASSPATH	- CLASSPATH of the gfsh JVM.  read only
@@ -81,7 +81,7 @@ System Variable	Description
 * SYS_USER - User name. read only
 * SYS_USER_HOME - User’s home directory. read only
 
-GFSH Environment Variables
+### GFSH Environment Variables
 
 Environment Variable	Description
 * APP_FETCH_SIZE - Fetch size to be used while querying. Values: 0 - 2147483647. Default value is 100
