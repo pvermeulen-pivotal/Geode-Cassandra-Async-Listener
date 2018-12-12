@@ -120,19 +120,19 @@ Your command history file can be helpful when you write a gfsh script. A history
 
 When a user runs start server or start locator from gfsh without specifying the member name, gfsh will automatically pick a random member name. This is useful for automation.
 
-**Running gfsh Commands on the OS Command Line
+** Running gfsh Commands on the OS Command Line
 
 You can run some gfsh commands directly from your operating system’s prompt by preceding the command with gfsh . This can be useful for Unix shell or Windows batch scripting. 
 
 For example: gfsh start locator --name=locator1 --port=10334
 
-**Running Multiple gfsh Commands on the OS Command Line
+** Running Multiple gfsh Commands on the OS Command Line
 
 To run multiple commands directly on the command line, use the -e option followed by the gfsh command within quote marks. 
 
 For example: gfsh -e "connect --use-http --url https://cloudcache-1.example.com/gemfire/v1" -e "rebalance" 
 
-**gfsh Commands with Parameter to Test Existence
+** gfsh Commands with Parameter to Test Existence
 
 The parameter "--if-not-exists" is provided on a gfsh command, allows for a script when running a gfsh create command that supports this parameter does not fail in the event the object exists.
 
@@ -147,37 +147,37 @@ Developers may invoke all gfsh commands. Given credentials with sufficient permi
 
 Do not use these listed gfsh commands; each has an explanation why it must not be used.
 These gfsh start commands will bring up members contrary to the configured plan. Their configuration will be wrong, and their existence is likely to contribute to data loss. Since they are not part of the configured plan, any upgrade will not include them, and if they were to stop or crash, the BOSH Director will not restart them.
-•	gfsh start locator
-•	gfsh start server
+*	gfsh start locator
+* gfsh start server
 
 These cluster stop commands will temporarily stop the member or cluster. However, the BOSH Director will notice that members are not running and restart them. So, these commands will be ineffective:
-•	gfsh stop locator
-•	gfsh stop server
-•	gfsh shutdown
+* gfsh stop locator
+* gfsh stop server
+* gfsh shutdown
 
 These Lucene-related commands are not supported:
-•	gfsh create lucene index
-•	gfsh describe lucene index
-•	gfsh destroy lucene index
-•	gfsh list lucene indexes
-•	gfsh search lucene
+* gfsh create lucene index
+* gfsh describe lucene index
+* gfsh destroy lucene index
+* gfsh list lucene indexes
+* gfsh search lucene
 
 These JNDI binding-related commands are not supported:
-•	gfsh create jndi-binding
-•	gfsh describe jndi-binding
-•	gfsh destroy jndi-binding
-•	gfsh list jndi-binding
+* gfsh create jndi-binding
+* gfsh describe jndi-binding
+* gfsh destroy jndi-binding
+* gfsh list jndi-binding
 
 This configure command will instill configuration contrary to the already-configured plan. Since it is not part of the configured plan, any upgrade will not include it. Therefore, do not use:
-•	gfsh configure pdx
+* gfsh configure pdx
 
 The create of a gateway receiver will never be appropriate for any situation. The PCC cluster will already have gateway receivers, and there is no situation in which the cluster can benefit from creating more. Therefore, do not use:
-•	gfsh create gateway receiver
+* gfsh create gateway receiver
 
 Do Not Export from a GemFire Cluster to a PCC Cluster
 While the expectation is that configuration and data can be exported from a GemFire cluster and then imported into a PCC cluster, this does not work. Using export and import commands will not have the desired effect of migration from one cluster to another. The import of cluster configuration requires a state that cannot be provided by a PCC cluster. The PCC cluster will already have its configuration, and upon restart or upgrade, that same configuration will be used. Given that the configuration cannot be imported, data import is problematic. Therefore, do not use:
-•	gfsh import cluster-configuration
-•	gfsh import data
+* gfsh import cluster-configuration
+* gfsh import data
 
 
 
