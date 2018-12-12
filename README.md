@@ -70,5 +70,15 @@ The client certificate public key must be installed in the Cassandra trust store
 * configure pdx - This command alters cluster-wide PDX configuration settings for all caches
 * describe config - Display the configuration of a member
 * export config - Export configurations, data, logs and stacktraces
-* export cluster-configuration - Exports a shared configuration zip file that contains cache.xml files,  gemfire.properties files and jar files needed to configure and operate a GemFire distributed system.
-online
+* export cluster-configuration - Exports a shared configuration zip file that contains cache.xml files,  gemfire.properties files and jar files needed to configure and operate a GemFire distributed system
+* status cluster-config-service - Reports on the status of the cluster configuration server
+* import cluster-configuration - Import a shared configuration
+
+### gfsh Data Commands
+* export data - Export user data from a region to a file
+* get - Display an entry in a region
+* import - Import user data from a file to a region
+* locate entry - Locate a region entry on a member
+* put - Add or update a region entry
+* query - Run queries against GemFire regions
+* remove - Remove an entry from a region
