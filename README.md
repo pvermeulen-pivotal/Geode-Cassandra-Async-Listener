@@ -111,6 +111,7 @@ set variable --name="APP_RESULT_VIEWER " --value="less" 
 Gfsh offers several ways to script run commands.
 
 **Running gfsh Scripts**
+
 You can create and run scripts that contain gfsh commands that you wish to execute. To execute the script, use the gfsh run command. 
 
 For example: gfsh run --file=myFile.gfsh --continue-on-error --quiet
