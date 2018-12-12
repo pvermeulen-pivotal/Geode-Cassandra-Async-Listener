@@ -52,20 +52,20 @@ The client certificate public key must be installed in the Cassandra trust store
 # PCF - PCC Configure and Setup Commands
 
 ### Create Service Commands
-cf create-service p-cloudcache small my-cloudcache -c '{"num_servers": 5}'
-cf create-service p-cloudcache small my-cloudcache -c '{"tls": true}'
-cf create-service p-cloudcache small my-cloudcache -c '{"new_size_percentage": 50}'
-cf create-service p-cloudcache small my-cloudcache -c '{"distributed_system_id" : 1 }'
-cf create-service p-cloudcache small my-cloudcache -c '{"num_servers": 5, "tls": true,  "new_size_percentage": 50, "distributed_system_id" : 1 }'
+* cf create-service p-cloudcache small my-cloudcache -c '{"num_servers": 5}'
+* cf create-service p-cloudcache small my-cloudcache -c '{"tls": true}'
+* cf create-service p-cloudcache small my-cloudcache -c '{"new_size_percentage": 50}'
+* cf create-service p-cloudcache small my-cloudcache -c '{"distributed_system_id" : 1 }'
+* cf create-service p-cloudcache small my-cloudcache -c '{"num_servers": 5, "tls": true,  "new_size_percentage": 50, "distributed_system_id" : 1 }'
 
 ### Update Service Commands
-cf update-service my-cloudcache -c '{"num_servers": true}'
-cf update-service my-cloudcache -c '{"tls": true}'
-cf update-service my-cloudcache -c '{"new_size_percentage": 50}'
-cf update-service my-cloudcache -c '{" distributed_system_id" : 1 }'
+* cf update-service my-cloudcache -c '{"num_servers": true}'
+* cf update-service my-cloudcache -c '{"tls": true}'
+* cf update-service my-cloudcache -c '{"new_size_percentage": 50}'
+* cf update-service my-cloudcache -c '{" distributed_system_id" : 1 }'
 
 ### Restart Service Commands
-cf update-service my- cloudcache -c '{"restart": true}'
+* cf update-service my- cloudcache -c '{"restart": true}'
 
 ## PCC Geode/GemFire Overview and Commands
 
