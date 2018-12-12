@@ -49,8 +49,9 @@ The client certificate public key must be installed in the Cassandra trust store
 
 **gemfireUpdateRegionName**: The GemFire region name where the enriched/changed/updated object will be written.
 
-# Basic GemFire gfsh Commands
+# gfsh Commands
 
+### gfsh Basic Commands
 * debug - Enable or disable debugging output in gfsh
 * echo - Echo the given text, which may include system and user variables
 * exit - Exit the gfsh shell. You can also use quit to exit the shell
@@ -62,3 +63,12 @@ The client certificate public key must be installed in the Cassandra trust store
 * set variable - Set variables in the GFSH environment
 * sleep - Delay gfsh command execution
 * version - Display product version information
+
+### gfsh Configuration Commands
+* alter runtime - Alters configuration properties for a specific member or members while the member or members are running.
+* change loglevel - Changes the logging level on specified servers
+* configure pdx - This command alters cluster-wide PDX configuration settings for all caches
+* describe config - Display the configuration of a member
+* export config - Export configurations, data, logs and stacktraces
+* export cluster-configuration - Exports a shared configuration zip file that contains cache.xml files,  gemfire.properties files and jar files needed to configure and operate a GemFire distributed system.
+online
