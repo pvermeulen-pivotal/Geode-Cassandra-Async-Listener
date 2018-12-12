@@ -51,16 +51,16 @@ The client certificate public key must be installed in the Cassandra trust store
 
 # Basic GemFire gfsh Commands
 
-Command|Description|Availability
-debug|Enable or disable debugging output in gfsh|online,offline
-echo|Echo the given text, which may include system and user variables|online,offline
-exit|Exit the gfsh shell. You can also use quit to exit the shell|online,offline
-help|If the argument is a gfsh command, displays syntax and usage information for the command. If there are no arguments,
-displays a list of all available commands|online,offline
-hint|Display information on topics and a list of commands associated with a topic|online,offline
-history|Show or save the command history|online,offline
-run|Execute a set of GFSH commands|online,offline
-set variable|Set variables in the GFSH environment|online,offline
-sh|Executes operating system (OS) commands|online,offline
-sleep|Delay gfsh command execution|online,offline
-version|Display product version information|online,offline
+Command | Description | Availability
+debug | Enable or disable debugging output in gfsh | online,offline
+echo | Echo the given text, which may include system and user variables | online,offline
+exit | Exit the gfsh shell. You can also use quit to exit the shell | online,offline
+help | If the argument is a gfsh command, displays syntax and usage information for the command. If there are no arguments,
+displays a list of all available commands | online,offline
+hint | Display information on topics and a list of commands associated with a topic | online,offline
+history | Show or save the command history | online,offline
+run | Execute a set of GFSH commands | online,offline
+set variable | Set variables in the GFSH environment | online,offline
+sh | Executes operating system (OS) commands | online,offline
+sleep | Delay gfsh command execution | online,offline
+version | Display product version information | online,offline
